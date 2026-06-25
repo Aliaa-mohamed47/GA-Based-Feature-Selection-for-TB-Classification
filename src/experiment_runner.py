@@ -89,7 +89,7 @@ def main():
                 "runtime_sec": round(elapsed, 2)
             })
             csvfile.flush() 
-            print(f"   Run {run_idx + 1}/2python src/experiment_runner.py5 finished.")
+            print(f"   Run {run_idx + 1}/25 finished.")
 
     print(f"\n[SUCCESS] Experiments finished. Saved to {results_path}")
     _print_final_report(results_path, baseline_acc)
