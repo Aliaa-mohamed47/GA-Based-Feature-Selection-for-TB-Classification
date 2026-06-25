@@ -8,8 +8,9 @@ Instead of using all extracted image features, this project evolves optimal bina
 ### 🧠 Core Methodology & Pipeline
 1. **Feature Extraction:** OpenCV extracts a 36-dimensional handcrafted feature vector per image (8 HOG texture features, 24 HSV color histogram bins, 4 basic color statistics).
 2. **Multi-Objective Optimization:** Evaluates feature subsets using a custom Fitness Function:
-
-$$\text{Fitness} = 0.95 \times \text{CV\_Accuracy} + 0.05 \times (1 - \text{Feature\_Ratio})$$
+```
+Fitness = 0.95 × CV_Accuracy + 0.05 × (1 − Feature_Ratio)
+```
 3. **Evaluation:** Guided by 3-Fold Cross-Validation using a KNN ($K=3$) classifier to prevent test-set leakage.
 4. **Reproducibility:** Validated across 30 independent trials with fixed random seeds.
 
